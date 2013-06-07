@@ -1,0 +1,151 @@
+This is WebToPay library package.
+
+Requirements
+============
+
+You must have PHP version 5.0 or higher
+
+
+Installing
+==========
+
+Easiest way to use library is to include merged all-in-one file.
+It is located in base libwebtopay directory, "WebToPay.php".
+In this case you only need this one file.
+Example:
+    <?php
+
+    require_once('WebToPay.php');
+
+    // Your code goes here
+    
+    ?>
+
+Alternatively, you can use files in the "src" folder.
+Either set-up autoloader or include file "includes.php" in "src" directory.
+Example:
+    <?php
+
+    require_once('libwebtopay/src/includes.php');
+
+    // Your code goes here
+    
+    ?>
+
+Testing
+=======
+
+    $ cd /path/to/libwebtopay
+    $ phpunit
+
+
+Demo
+===============
+
+demo_shop is a simple example how you can integrate library to your project.
+It also shows how to get payment methods available for your project and specific amount.
+
+Demo needs write permissions to folder /var to function properly.
+If you want to test demo online, also change parameters in includes/config.php file to your project's.
+If you are testing offline, demos will still work, but webtopay.com will be unable to send callback to your site - 
+you can login to your account and copy-and-paste the callback link in your browser in that case.
+
+
+Version history
+===============
+
+Version 1.6     - 2012-04-12
+
+    * refactored WebToPay class to separate non-static classes
+    * changed request signing and callback processing - now using base64 encoding
+    * removed some public WebToPay methods
+
+Version 1.5     - 2012-02-08
+
+    * added API for getting available payment methods
+    * refactored old example and added another one
+    
+Version 1.5		- 2011-10-13
+
+	* updated SS1 to SS1 v2 (SS1 obsolete and not available in 1.5)
+	* force to use SS2 if OpenSSL available
+	* added time_limit parameter
+
+Version 1.4		- 2011-07-01
+
+	* added WebToPay::getPaymentUrl()
+
+Version 1.4		- 2011-06-15
+
+	* WebToPay::getXML() fix
+
+Version 1.4		- 2011-05-30
+
+	* small refactoring
+
+Version 1.4		- 2011-05-26
+
+	* added methods which enables user to download payment method list
+
+Version 1.4		- 2011-03-28
+
+	* added 'RequestID'
+
+Version 1.3.2   - 2010-08-18
+
+    * country validation fix
+
+Version 1.3.1   - 2010-08-16
+
+    * projectid is required in checkResponse() in 1.3.1 version
+
+Version 1.3     - 2010-06-14
+
+    * 'sign' parameter now supports utf-8
+    * WebToPay::buildRepeatRequest() added
+    * more unit-tests added
+
+Version 1.2.5   - 2010-06-14
+
+    * removed response checking by parameters specifications, now response is
+      checked only against SS1/SS2 security checks
+
+
+Version 1.2.4   - 2010-05-20
+
+    * 0x14 error code added
+    * sign is required
+
+Version 1.2.3   - 2010-05-13
+
+    * OpenSSL verification fixes to work correctly with different OpenSSL versions
+    * PHP5 syntax fixes: non-static method changed to static as they should be
+    * demo fixes to handle correctly magic quotes
+
+Version 1.2.2   - 2010-05-11
+
+    * ignore third version number when comparing version numbers
+    * checks for openssl library version, use SS2 only with 0.9.8 and greather version of openssl
+    * demo response url fix
+
+Version 1.2.1   - 2010-05-10
+
+    * orderid, amount and currency are not required in checkResponse()
+    * orderid no longer is restricted to only digits, now characters ar accepted
+    * posibility to toggle SS2 checking
+    * improved unit testing
+
+Version 1.2     - 2010-04-14
+
+    * introduced library versioning
+    * mikro payments support
+
+Version 1.1     - 2010-04-14
+
+    * merchantid is deprecated, projectid should be used instead
+    * SS1 checking added
+
+Version 1.0     - 2010-01-21
+
+    * Initial release
+
