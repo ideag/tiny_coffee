@@ -1,12 +1,7 @@
 # Gust 
-Contributors: ideag
-Donate link: http://wordofpress.com/#coffee
-Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
-Requires at least: 3.0.1
-Tested up to: 3.8
-Stable tag: 0.1
-License: MIT
-License URI: http://wordofpress.com/gust/license
+*   Donate link: http://wordofpress.com/#coffee
+*   Requires at least: 3.0.1
+*   License: MIT
 
 A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice.
 
