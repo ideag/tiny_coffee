@@ -1,3 +1,13 @@
+.tiny_coffee a {
+  color:#2b2b2b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tiny_coffee a:hover {
+  text-decoration: underline;
+}
+
 .tiny_coffee_widget .noUi-horizontal {
   height:10px;
 }
@@ -52,10 +62,13 @@
 
 .tiny_coffee .tiny_coffee_form button {
   background-color: #2b2b2b;/*#242628;  */
+  color:#ffffff;
   font-size:18px;
   line-height:30px;
   padding-top:5px;
   padding-bottom:5px;
+  border:none;
+  border-radius:2px;
 }
 
 .tiny_coffee .tiny_coffee_form button:hover{
@@ -90,8 +103,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  overflow-x: auto;
-  overflow-y: scroll;
+  overflow: hidden;
   z-index: 1040;
   pointer-events: none;
   -webkit-transition: all 0.15s linear 0s;
@@ -184,7 +196,9 @@
     z-index: 9999;
     -webkit-transition: opacity 0.3s linear;
     -moz-transition: opacity 0.3s linear;
-    transition: opacity 0.3s linear; }
+    transition: opacity 0.3s linear; 
+    color:#2b2b2b;
+  }
     #modal-container .modal-content .close:hover {
       text-decoration: none; }
     #modal-container .modal-content .close:hover {
