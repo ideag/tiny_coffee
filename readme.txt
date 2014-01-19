@@ -1,4 +1,4 @@
-# Gust 
+=== Gust ===
 Contributors: ideag
 Donate link: http://wordofpress.com/#coffee
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
@@ -10,7 +10,7 @@ License URI: http://wordofpress.com/gust/license
 
 A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice.
 
-## Description
+== Description ==
 
 Ask your supporters to treat you to a cup of coffee, pint of beer or some other simple treat. It is a more creative way to ask for donations via PayPal.
 
@@ -21,25 +21,26 @@ You can use this as:
 *   Sidebar widget
 *   Hash-activated modal screen (domain.com#coffee)
 
-## Installation
+== Installation ==
 
 1. Upload `tiny_coffee` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Setup your information in `Settings>tinyCoffee`
 1. Add to your website via template tag, shortcode, widget or modal view.
 
-## Frequently Asked Questions
+== Frequently Asked Questions ==
 
-## Changelog
 
-### 0.1
+== Changelog ==
+
+= 0.1 =
 Initial release
 
-## Upgrade Notice
+== Upgrade Notice ==
 
 No upgrade notices
 
-## Screenshots
+== Screenshots ==
 1. Inside a post/page
 2. In sidebar of Twenty Fourteen theme
 3. As a modal view (domain.com#coffee)
