@@ -1,4 +1,4 @@
-# Gust 
+# tinyCoffee
 *   Donate link: http://wordofpress.com/#coffee
 *   Requires at least: 3.0.1
 *   License: MIT
