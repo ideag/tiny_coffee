@@ -3,7 +3,7 @@
 Plugin Name: tinyCoffee
 Plugin URI: http://github.com/ideag/tiny_coffee
 Description: Ask people for coffee money
-Version: 0.1
+Version: 0.1.1
 Author: Arūnas Liuiza
 Author URI: http://github.com/ideag
 Text Domain: tiny_coffee
