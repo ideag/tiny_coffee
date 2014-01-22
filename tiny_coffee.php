@@ -560,14 +560,18 @@ class Coffee_widget extends WP_Widget {
     echo $args['after_widget'];
   }
   public function form( $instance ) {
+	$instance = wp_parse_args(
+		$instance,
+		array( 'title' => '', 'text' => true )
+	);
     ?>
     <p>
       <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','tiny_coffee' ); ?></label> 
-      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
     </p>
     <p>
       <label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Text:','tiny_coffee' ); ?></label> 
-      <textarea class="widefat" id="<?php echo $this->get_field_id( 'text' ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>"><?php echo esc_attr( $title ); ?></textarea>
+      <textarea class="widefat" id="<?php echo $this->get_field_id( 'text' ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>"><?php echo esc_html( $instance['text'] ); ?></textarea>
     </p>
     <?php 
   }
