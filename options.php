@@ -58,7 +58,7 @@ class tiny_options {
           $section['slug'],
           array(
             'option_id'=>"{$section['slug']}_{$field['slug']}",
-            'description'=>$field['description'],
+            'description'=>!empty($field['description']) ? $field['description'] : '',
             'options'=>isset($field['options'])?$field['options']:false
           )
         );
