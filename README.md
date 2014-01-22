@@ -27,6 +27,9 @@ You can use this as:
 
 ## Changelog
 
+### 0.1.1
+widget related bug fixes, courtesy of Dzikri Aziz (kucrut)
+
 ### 0.1
 Initial release
 
