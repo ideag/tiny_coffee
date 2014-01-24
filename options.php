@@ -249,11 +249,6 @@ class Tiny_Coffee_Options {
 	}
 
 
-	public function defaults() {
-		update_option( $this->data['option_name'], $this->data['defaults'] );
-	}
-
-
 	public function page(){
 		?>
 			<div class="wrap">
@@ -318,6 +313,16 @@ class Tiny_Coffee_Options {
 
 	public function load() {
 		$this->o = get_option( $this->data['option_name'] );
+		// First time, save defaults
+		if ( false === $this->o ) {
+			$this->defaults();
+		}
+	}
+
+
+	public function defaults() {
+		update_option( $this->data['option_name'], $this->data['defaults'] );
+		$this->o = $this->data['defaults'];
 	}
 
 
