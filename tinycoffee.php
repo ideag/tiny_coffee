@@ -559,7 +559,7 @@ class Coffee {
   }
   public static function widget() {
 	require_once dirname( __FILE__ ) . '/widget.php';
-    register_widget( 'coffee_widget' );
+    register_widget( 'Tiny_Coffee_Widget' );
   }
   public static function tag($attr=false){
     return Coffee::shortcode($attr);
