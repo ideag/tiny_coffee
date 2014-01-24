@@ -628,5 +628,3 @@ class Coffee {
     return $return;
   }
 }
-
-?>
