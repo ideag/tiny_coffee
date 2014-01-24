@@ -100,7 +100,7 @@ class tiny_options {
     $options = get_option($this->data['option_name']);
     echo "<select id='{$args['option_id']}' name='{$this->data['option_name']}[{$args['option_id']}]'>";
     if (isset($args['options']['list_none']) && $args['options']['list_none'])
-      echo "<option value=\"\"".($options[$args['option_id']]?"":" selected=\"selected\"").">".__('-none-','tiny_coffee')."</option>";
+      echo "<option value=\"\"".($options[$args['option_id']]?"":" selected=\"selected\"").">".__('-none-','tinycoffee')."</option>";
     foreach($args['options']['list'] as $key => $val) {
       echo "<option value=\"{$key}\"".($options[$args['option_id']]==$key?" selected=\"selected\"":"").">{$val}</option>";
     }
