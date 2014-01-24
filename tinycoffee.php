@@ -514,7 +514,7 @@ $data = array(
     )
   )
 );
-$tiny_coffee_options = new tiny_options($data);
+$tiny_coffee_options = new Tiny_Coffee_Options($data);
 $options = $tiny_coffee_options->get();
 
 

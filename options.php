@@ -1,6 +1,6 @@
 <?php 
 
-class tiny_options {
+class Tiny_Coffee_Options {
   public $data = array();
   public $o = array();
 
@@ -128,5 +128,3 @@ class tiny_options {
       echo '<p class="description">'.$args['description'].'</p>';
   }
 }
-
-?>
