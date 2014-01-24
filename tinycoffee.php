@@ -590,7 +590,7 @@ class Coffee {
     wp_enqueue_script( 'tiny_coffee', plugin_dir_url( __FILE__ ).'js/tiny_coffee.js', array('jquery','jquery_slider'), true );
     wp_enqueue_style( 'font_awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
     wp_enqueue_style( 'jquery_slider', plugin_dir_url( __FILE__ ).'js/nouislider.jquery.min.css');
-    wp_enqueue_style( 'tiny_coffee', plugin_dir_url( __FILE__ ).'tiny_coffee.css');
+    wp_enqueue_style( 'tiny_coffee', plugin_dir_url( __FILE__ ).'tinycoffee.css');
   }
   public static function modal_view($attr) {
     $return = '<div id="modal-container">
