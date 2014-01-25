@@ -42,10 +42,15 @@ class Tiny_Coffee {
 
 
 	public static function init() {
+		$includes_dir = plugin_dir_path( __FILE__ ) . 'includes/';
+
+		# i18n
 		load_plugin_textdomain( 'tinycoffee', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-		require_once plugin_dir_path( __FILE__ ) . 'options.php';
-		$coffee_settings = new Tiny_Coffee_Options;
+		# Settings page
+		require_once  $includes_dir . 'options-data.php';
+		require_once  $includes_dir . 'options.php';
+		$coffee_settings = new Tiny_Coffee_Options( Tiny_Coffee_Options_Data::get() );
 		self::$options   = $coffee_settings->get();
 
 		// No callbacks activated, nothing to do.
