@@ -166,26 +166,48 @@ class Tiny_Coffee {
 			//'no_note'       => '1'
 		);
 
-		$paypal_url = $options['paypal_testing']?'https://www.sandbox.paypal.com/cgi-bin/webscr':'https://www.paypal.com/cgi-bin/webscr';
-		if (isset($options['widget']) && $options['widget']){
-			$return  = "<div class=\"tiny_coffee tiny_coffee_widget\">\r\n";
-		} else {
-			$return  = "<div class=\"tiny_coffee\">\r\n";
-			$return .= "  <header class=\"modal-header\"><h1>{$options['coffee_title']}</h1></header>\r\n";
+		if ( ! empty( $options['paypal_testing'] ) ) {
+			$paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
 		}
-		$return .= "  <section class=\"modal-body\" data-icon=\"{$options['coffee_icon']}\" data-price=\"{$options['coffee_price']}\" data-rate=\"{$options['paypal_exchange']}\" data-currency=\"{$options['coffee_currency']}\" data-hash=\"{$options['coffee_hash']}\">\r\n";
-		$return .= "    <p class=\"note\">{$options['coffee_text']}</p>\r\n";
-		$return .= "    <div class=\"tiny_coffee_slider\"></div>\r\n";
-		$return .= "    <div class=\"right\"><span class=\"count\"></span> <small class=\"count2\"></small></div>\r\n";
-		$return .= "    <form action=\"{$paypal_url}\" method=\"post\" class=\"tiny_coffee_form\">\r\n";
-		foreach ($form_data as $key => $value) {
-			$return .=  "      <input type=\"hidden\" name=\"{$key}\" value=\"{$value}\"/>\r\n";
+		else {
+			$paypal_url = 'https://www.paypal.com/cgi-bin/webscr';
 		}
-		$return .= "      <button type=\"submit\"><i class=\"fa fa-shopping-cart\"></i></button>\r\n";
-		$return .= "    </form>";
-		$return .= "  </section>";
-		$return .= "</div>";
-		return $return;
+
+		ob_start();
+		?>
+		<?php if ( ! empty( $options['widget'] ) ) : ?>
+			<div class="tiny_coffee tiny_coffee_widget">
+		<?php else : ?>
+			<div class="tiny_coffee">
+				<header class="modal-header">
+					<h1><?php echo $options['coffee_title'] ?></h1>
+				</header>
+		<?php endif; ?>
+				<?php printf(
+					'<section class="modal-body" data-icon="%s" data-price="%s" data-rate="%s" data-currency="%s" data-hash="%s">',
+					esc_attr( $options['coffee_icon'] ),
+					esc_attr( $options['coffee_price'] ),
+					esc_attr( $options['paypal_exchange'] ),
+					esc_attr( $options['coffee_currency'] ),
+					esc_attr( $options['coffee_hash'] )
+				) ?>
+					<?php echo wpautop( $options['coffee_text'] ) ?>
+					<div class="tiny_coffee_slider"></div>
+					<div class="right"><span class="count"></span> <small class="count2"></small></div>
+					<form action="<?php echo esc_attr( $paypal_url ) ?>" method="post" class="tiny_coffee_form">
+						<?php foreach ( $form_data as $key => $value ) : ?>
+							<?php printf(
+								'<input type="hidden" name="%s" value="%s"/>',
+								esc_attr( $key ),
+								esc_attr( $value )
+							) ?>
+						<?php endforeach; ?>
+						<button type="submit"><i class="fa fa-shopping-cart"></i></button>
+					</form>
+				</section>
+			</div>
+		<?php
+		return ob_get_clean();
 	}
 }
 
