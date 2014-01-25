@@ -4,32 +4,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tinyCoffee 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/tinycoffee\n"
-"POT-Creation-Date: 2014-01-25 05:33:35+00:00\n"
+"POT-Creation-Date: 2014-01-25 06:09:50+00:00\n"
+"PO-Revision-Date: 2014-01-25 13:13+0700\n"
+"Last-Translator: Dzikri Aziz <kvcrvt@gmail.com>\n"
+"Language-Team: Dzikri Aziz <kucrut@kucrut.org>\n"
+"Language: Indonesia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-01-25 12:46+0700\n"
-"Last-Translator: Dzikri Aziz <kvcrvt@gmail.com>\n"
-"Language-Team: Dzikri Aziz <kucrut@kucrut.org>\n"
 "X-Generator: Poedit 1.5.5\n"
-"Language: Indonesia\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: options.php:95
+#: includes/options-data.php:107
 msgid "tinyCoffee Options"
 msgstr "Pengaturan tinyCoffee"
 
 #. #-#-#-#-#  tinycoffee.pot (tinyCoffee 0.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: options.php:97
+#: includes/options-data.php:109
 msgid "tinyCoffee"
 msgstr "tinyCoffee"
 
-#: options.php:103
+#: includes/options-data.php:115
 msgid "Buy me a cup of coffee"
 msgstr "Belikan segelas kopi"
 
-#: options.php:104
+#: includes/options-data.php:116
 msgid ""
 "A ridiculous amount of coffee was consumed in the process of building this "
 "project. Add some fuel if you'd like to keep me going!"
@@ -37,126 +37,126 @@ msgstr ""
 "Jutaan gelas kopi telah habis dalam proses pembuatan projek ini. Belikan "
 "saya kopi agar dapat meneruskannya!"
 
-#: options.php:112
+#: includes/options-data.php:124
 msgctxt "Blog Title"
 msgid "A coffee for %s"
 msgstr "Kopi untuk %s"
 
-#: options.php:126
+#: includes/options-data.php:138
 msgid "Main Settings"
 msgstr "Pengaturan Utama"
 
-#: options.php:130
+#: includes/options-data.php:142
 msgid "Default title"
 msgstr "Judul standar"
 
-#: options.php:135
+#: includes/options-data.php:147
 msgid "Default text"
 msgstr "Teks standar"
 
-#: options.php:140
+#: includes/options-data.php:152
 msgid "Default icon"
 msgstr "Ikon standar"
 
-#: options.php:143
+#: includes/options-data.php:155
 msgid "You can choose any %s icon"
 msgstr "Anda dapat memilih icon %s apa saja"
 
-#: options.php:152
+#: includes/options-data.php:164
 msgid "Hash"
 msgstr "Hash"
 
-#: options.php:157
+#: includes/options-data.php:169
 msgid "Currency template"
 msgstr "Templat mata uang"
 
-#: options.php:162
+#: includes/options-data.php:174
 msgid "Coffee price"
 msgstr "Harga kopi"
 
-#: options.php:164
+#: includes/options-data.php:176
 msgid "How much is a single cup of your favorite coffee?"
 msgstr "Berapa harga segelas kopi kesukaan anda?"
 
-#: options.php:170
+#: includes/options-data.php:182
 msgid "Paypal Settings"
 msgstr "Pengaturan Paypal"
 
-#: options.php:174
+#: includes/options-data.php:186
 msgid "Paypal username"
 msgstr "Nama Pengguna Paypal"
 
-#: options.php:179
+#: includes/options-data.php:191
 msgid "Paypal currency"
 msgstr "Mata Uang Paypal"
 
-#: options.php:184
+#: includes/options-data.php:196
 msgid "Exchange rate"
 msgstr "Nilai tukar"
 
-#: options.php:189
+#: includes/options-data.php:201
 msgid "Payment text"
 msgstr "Teks pembayaran"
 
-#: options.php:194
+#: includes/options-data.php:206
 msgid "Sandbox mode"
 msgstr "Mode Sandbox"
 
-#: options.php:195
+#: includes/options-data.php:207
 msgid "Enable"
 msgstr "Aktifkan"
 
-#: options.php:202
+#: includes/options-data.php:214
 msgid "Callback Settings"
 msgstr "Pengaturan Callback"
 
-#: options.php:206
+#: includes/options-data.php:218
 msgid "Success callback"
 msgstr "Callback sukses"
 
-#: options.php:211
+#: includes/options-data.php:223
 msgid "Cancel callback"
 msgstr "Callback batal"
 
-#: options.php:216
+#: includes/options-data.php:228
 msgid "Activate"
 msgstr "Aktifkan"
 
-#: options.php:220
+#: includes/options-data.php:232
 msgid "Template tag"
 msgstr "Tag templat"
 
-#: options.php:221
+#: includes/options-data.php:233
 msgid "Shortcode"
 msgstr "Kode singkat"
 
-#: options.php:222
+#: includes/options-data.php:234
 msgid "Modal dialog"
 msgstr "Modal dialog"
 
-#: options.php:223
+#: includes/options-data.php:235
 msgid "Widget"
 msgstr "Widget"
 
-#: tinycoffee.php:98
-msgid "Close"
-msgstr "Tutup"
-
-#: widget.php:11
+#: includes/widget.php:11
 msgid "Coffee Widget"
 msgstr "Kopi"
 
-#: widget.php:12
+#: includes/widget.php:12
 msgid "Ask for coffee in your sidebar"
 msgstr "Minta dibelikan kopi"
 
-#: widget.php:39
+#: includes/widget.php:39
 msgid "Title:"
 msgstr "Judul:"
 
-#: widget.php:52
+#: includes/widget.php:52
 msgid "Text:"
 msgstr "Teks:"
+
+#: tinycoffee.php:113
+msgid "Close"
+msgstr "Tutup"
 
 #. Plugin URI of the plugin/theme
 msgid "http://github.com/ideag/tiny_coffee"
