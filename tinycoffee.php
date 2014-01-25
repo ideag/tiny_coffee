@@ -78,12 +78,15 @@ class Tiny_Coffee {
 
 
 	public static function scripts() {
-		wp_register_script( 'jquery-noui-slider', plugin_dir_url( __FILE__ ) . 'js/nouislider.jquery.min.js', 'jquery', null, true );
-		wp_enqueue_script( 'tinycoffee', plugin_dir_url( __FILE__ ) . 'js/tinycoffee.js', array( 'jquery', 'jquery-noui-slider' ), self::VERSION, true );
+		$dir_url = plugin_dir_url( __FILE__ );
+		$suffix  = ( ! defined( 'SCRIPT_DEBUG' ) || ! SCRIPT_DEBUG ) ? '.min' : '';
+
+		wp_register_script( 'jquery-noui-slider', $dir_url . 'js/nouislider.jquery.min.js', 'jquery', null, true );
+		wp_enqueue_script( 'tinycoffee', $dir_url . 'js/tinycoffee' . $suffix . '.js', array( 'jquery', 'jquery-noui-slider' ), self::VERSION, true );
 
 		wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
-		wp_enqueue_style( 'jquery-noui-slider', plugin_dir_url( __FILE__ ) . 'js/nouislider.jquery.min.css' );
-		wp_enqueue_style( 'tinycoffee', plugin_dir_url( __FILE__ ) . 'tinycoffee.css', self::VERSION );
+		wp_enqueue_style( 'jquery-noui-slider', $dir_url . 'js/nouislider.jquery.min.css' );
+		wp_enqueue_style( 'tinycoffee', $dir_url . 'css/tinycoffee' . $suffix . '.css', false, self::VERSION );
 	}
 
 
