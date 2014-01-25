@@ -192,6 +192,7 @@ class Tiny_Coffee_Options {
 						array(
 							'slug'  => 'testing',
 							'title' => __( 'Sandbox mode', 'tinycoffee' ),
+							'label' => __( 'Enable', 'tinycoffee' ),
 							'type'  => 'checkbox'
 						),
 					)
@@ -297,6 +298,7 @@ class Tiny_Coffee_Options {
 						'option_type' => $field['type'],
 						'option_id'   => $option_id,
 						'description' => ! empty( $field['description'] ) ? $field['description'] : '',
+						'label'       => ! empty( $field['label'] ) ? $field['label'] : '',
 						'options'     => isset( $field['options'] ) ? $field['options'] : false,
 						'value'       => isset( $this->o[ "{$section['slug']}_{$field['slug']}" ] ) ? $this->o[ "{$section['slug']}_{$field['slug']}" ] : false,
 					)
@@ -395,11 +397,20 @@ class Tiny_Coffee_Options {
 
 
 	public function checkbox( $args ) {
-		printf(
-			'<input id="%1$s" name="%1$s" type="checkbox" value="true"%2$s />',
-			esc_attr( $args['option_id'] ),
-			checked( $args['value'], 'true', false )
-		);
+		if ( ! empty( $args['label'] ) ) :
+			printf(
+				'<label><input id="%1$s" name="%1$s" type="checkbox" value="true"%2$s /> %3$s</label>',
+				esc_attr( $args['option_id'] ),
+				checked( $args['value'], 'true', false ),
+				esc_html( $args['label'] )
+			);
+		else :
+			printf(
+				'<input id="%1$s" name="%1$s" type="checkbox" value="true"%2$s />',
+				esc_attr( $args['option_id'] ),
+				checked( $args['value'], 'true', false )
+			);
+		endif;
 	}
 
 
