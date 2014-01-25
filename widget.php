@@ -15,7 +15,6 @@ class Tiny_Coffee_Widget extends WP_Widget {
 
 
 	public function widget( $args, $instance ) {
-		$instance = array_filter( $instance );
 		$instance['widget'] = true;
 		?>
 		<?php echo $args['before_widget']; ?>
@@ -25,7 +24,7 @@ class Tiny_Coffee_Widget extends WP_Widget {
 			?>
 				<?php echo $args['before_title'] . $title . $args['after_title']; ?>
 			<?php endif; ?>
-			<?php echo Coffee::tag( $instance ); ?>
+			<?php echo Tiny_Coffee::tag( $instance ); ?>
 		<?php echo $args['after_widget'];
 	}
 
@@ -34,7 +33,11 @@ class Tiny_Coffee_Widget extends WP_Widget {
 		$instance = $this->update( $instance );
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'tinycoffee' ); ?></label>
+			<?php printf(
+				'<label for="%s">%s</label>',
+				esc_attr( $this->get_field_id( 'title' ) ),
+				esc_html_e( 'Title:', 'tinycoffee' )
+			) ?>
 			<?php printf(
 				'<input class="widefat" id="%s" name="%s" type="text" value="%s" />',
 				esc_attr( $this->get_field_id( 'title' ) ),
@@ -43,7 +46,11 @@ class Tiny_Coffee_Widget extends WP_Widget {
 			) ?>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Text:', 'tinycoffee' ); ?></label>
+			<?php printf(
+				'<label for="%s">%s</label>',
+				esc_attr( $this->get_field_id( 'title' ) ),
+				esc_html_e( 'Text:', 'tinycoffee' )
+			) ?>
 			<?php printf(
 				'<textarea class="widefat" id="%s" name="%s">%s</textarea>',
 				esc_attr( $this->get_field_id( 'text' ) ),
