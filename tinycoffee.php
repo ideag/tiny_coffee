@@ -8,6 +8,7 @@
  * Author: Arūnas Liuiza
  * Author URI: http://github.com/ideag
  * Text Domain: tinycoffee
+ * Domain Path: /languages
  */
 
 // Make sure we don't expose any info if called directly
@@ -41,6 +42,8 @@ class Tiny_Coffee {
 
 
 	public static function init() {
+		load_plugin_textdomain( 'tinycoffee', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 		require_once plugin_dir_path( __FILE__ ) . 'options.php';
 		$coffee_settings = new Tiny_Coffee_Options;
 		self::$options   = $coffee_settings->get();

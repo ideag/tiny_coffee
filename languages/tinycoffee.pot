@@ -1,0 +1,171 @@
+# Copyright (C) 2014 tinyCoffee
+# This file is distributed under the same license as the tinyCoffee package.
+msgid ""
+msgstr ""
+"Project-Id-Version: tinyCoffee 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/tinycoffee\n"
+"POT-Creation-Date: 2014-01-25 05:33:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-01-25 12:35+0700\n"
+"Last-Translator: Dzikri Aziz <kvcrvt@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: options.php:95
+msgid "tinyCoffee Options"
+msgstr ""
+
+#. #-#-#-#-#  tinycoffee.pot (tinyCoffee 0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: options.php:97
+msgid "tinyCoffee"
+msgstr ""
+
+#: options.php:103
+msgid "Buy me a cup of coffee"
+msgstr ""
+
+#: options.php:104
+msgid ""
+"A ridiculous amount of coffee was consumed in the process of building this "
+"project. Add some fuel if you'd like to keep me going!"
+msgstr ""
+
+#: options.php:112
+msgctxt "Blog Title"
+msgid "A coffee for %s"
+msgstr ""
+
+#: options.php:126
+msgid "Main Settings"
+msgstr ""
+
+#: options.php:130
+msgid "Default title"
+msgstr ""
+
+#: options.php:135
+msgid "Default text"
+msgstr ""
+
+#: options.php:140
+msgid "Default icon"
+msgstr ""
+
+#: options.php:143
+msgid "You can choose any %s icon"
+msgstr ""
+
+#: options.php:152
+msgid "Hash"
+msgstr ""
+
+#: options.php:157
+msgid "Currency template"
+msgstr ""
+
+#: options.php:162
+msgid "Coffee price"
+msgstr ""
+
+#: options.php:164
+msgid "How much is a single cup of your favorite coffee?"
+msgstr ""
+
+#: options.php:170
+msgid "Paypal Settings"
+msgstr ""
+
+#: options.php:174
+msgid "Paypal username"
+msgstr ""
+
+#: options.php:179
+msgid "Paypal currency"
+msgstr ""
+
+#: options.php:184
+msgid "Exchange rate"
+msgstr ""
+
+#: options.php:189
+msgid "Payment text"
+msgstr ""
+
+#: options.php:194
+msgid "Sandbox mode"
+msgstr ""
+
+#: options.php:195
+msgid "Enable"
+msgstr ""
+
+#: options.php:202
+msgid "Callback Settings"
+msgstr ""
+
+#: options.php:206
+msgid "Success callback"
+msgstr ""
+
+#: options.php:211
+msgid "Cancel callback"
+msgstr ""
+
+#: options.php:216
+msgid "Activate"
+msgstr ""
+
+#: options.php:220
+msgid "Template tag"
+msgstr ""
+
+#: options.php:221
+msgid "Shortcode"
+msgstr ""
+
+#: options.php:222
+msgid "Modal dialog"
+msgstr ""
+
+#: options.php:223
+msgid "Widget"
+msgstr ""
+
+#: tinycoffee.php:98
+msgid "Close"
+msgstr ""
+
+#: widget.php:11
+msgid "Coffee Widget"
+msgstr ""
+
+#: widget.php:12
+msgid "Ask for coffee in your sidebar"
+msgstr ""
+
+#: widget.php:39
+msgid "Title:"
+msgstr ""
+
+#: widget.php:52
+msgid "Text:"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://github.com/ideag/tiny_coffee"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Ask people for coffee money"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Arūnas Liuiza"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://github.com/ideag"
+msgstr ""
