@@ -40,16 +40,23 @@ class Tiny_Coffee {
 	 */
 	protected static $options = array();
 
+	/**
+	 * Holds includes dir path
+	 *
+	 * @var string
+	 */
+	protected static $includes_dir;
+
 
 	public static function init() {
-		$includes_dir = plugin_dir_path( __FILE__ ) . 'includes/';
+		self::$includes_dir = plugin_dir_path( __FILE__ ) . 'includes/';
 
 		# i18n
 		load_plugin_textdomain( 'tinycoffee', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		# Settings page
-		require_once  $includes_dir . 'options-data.php';
-		require_once  $includes_dir . 'options.php';
+		require_once self::$includes_dir . 'options-data.php';
+		require_once self::$includes_dir . 'options.php';
 		$coffee_settings = new Tiny_Coffee_Options( Tiny_Coffee_Options_Data::get() );
 		self::$options   = $coffee_settings->get();
 
@@ -114,7 +121,7 @@ class Tiny_Coffee {
 
 
 	public static function widget() {
-		require_once dirname( __FILE__ ) . '/widget.php';
+		require_once self::$includes_dir . 'widget.php';
 		register_widget( 'Tiny_Coffee_Widget' );
 	}
 
