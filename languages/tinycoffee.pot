@@ -1,0 +1,170 @@
+# Copyright (C) 2014 tinyCoffee
+# This file is distributed under the same license as the tinyCoffee package.
+msgid ""
+msgstr ""
+"Project-Id-Version: tinyCoffee 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/tinycoffee\n"
+"POT-Creation-Date: 2014-01-25 06:09:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/options-data.php:107
+msgid "tinyCoffee Options"
+msgstr ""
+
+#. #-#-#-#-#  tinycoffee.pot (tinyCoffee 0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/options-data.php:109
+msgid "tinyCoffee"
+msgstr ""
+
+#: includes/options-data.php:115
+msgid "Buy me a cup of coffee"
+msgstr ""
+
+#: includes/options-data.php:116
+msgid ""
+"A ridiculous amount of coffee was consumed in the process of building this "
+"project. Add some fuel if you'd like to keep me going!"
+msgstr ""
+
+#: includes/options-data.php:124
+msgctxt "Blog Title"
+msgid "A coffee for %s"
+msgstr ""
+
+#: includes/options-data.php:138
+msgid "Main Settings"
+msgstr ""
+
+#: includes/options-data.php:142
+msgid "Default title"
+msgstr ""
+
+#: includes/options-data.php:147
+msgid "Default text"
+msgstr ""
+
+#: includes/options-data.php:152
+msgid "Default icon"
+msgstr ""
+
+#: includes/options-data.php:155
+msgid "You can choose any %s icon"
+msgstr ""
+
+#: includes/options-data.php:164
+msgid "Hash"
+msgstr ""
+
+#: includes/options-data.php:169
+msgid "Currency template"
+msgstr ""
+
+#: includes/options-data.php:174
+msgid "Coffee price"
+msgstr ""
+
+#: includes/options-data.php:176
+msgid "How much is a single cup of your favorite coffee?"
+msgstr ""
+
+#: includes/options-data.php:182
+msgid "Paypal Settings"
+msgstr ""
+
+#: includes/options-data.php:186
+msgid "Paypal username"
+msgstr ""
+
+#: includes/options-data.php:191
+msgid "Paypal currency"
+msgstr ""
+
+#: includes/options-data.php:196
+msgid "Exchange rate"
+msgstr ""
+
+#: includes/options-data.php:201
+msgid "Payment text"
+msgstr ""
+
+#: includes/options-data.php:206
+msgid "Sandbox mode"
+msgstr ""
+
+#: includes/options-data.php:207
+msgid "Enable"
+msgstr ""
+
+#: includes/options-data.php:214
+msgid "Callback Settings"
+msgstr ""
+
+#: includes/options-data.php:218
+msgid "Success callback"
+msgstr ""
+
+#: includes/options-data.php:223
+msgid "Cancel callback"
+msgstr ""
+
+#: includes/options-data.php:228
+msgid "Activate"
+msgstr ""
+
+#: includes/options-data.php:232
+msgid "Template tag"
+msgstr ""
+
+#: includes/options-data.php:233
+msgid "Shortcode"
+msgstr ""
+
+#: includes/options-data.php:234
+msgid "Modal dialog"
+msgstr ""
+
+#: includes/options-data.php:235
+msgid "Widget"
+msgstr ""
+
+#: includes/widget.php:11
+msgid "Coffee Widget"
+msgstr ""
+
+#: includes/widget.php:12
+msgid "Ask for coffee in your sidebar"
+msgstr ""
+
+#: includes/widget.php:39
+msgid "Title:"
+msgstr ""
+
+#: includes/widget.php:52
+msgid "Text:"
+msgstr ""
+
+#: tinycoffee.php:113
+msgid "Close"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://github.com/ideag/tiny_coffee"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Ask people for coffee money"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Arūnas Liuiza"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://github.com/ideag"
+msgstr ""

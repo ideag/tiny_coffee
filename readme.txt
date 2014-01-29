@@ -16,16 +16,16 @@ Ask your supporters to treat you to a cup of coffee, pint of beer or some other 
 
 You can use this as:
 
-*   Template tag (get_coffee()/the_coffee())
-*   Shortcode ([coffee]/[tiny_coffee])
+*   Template tag `get_coffee()`/`the_coffee()`
+*   Shortcode `[coffee]`/`[tiny_coffee]`
 *   Sidebar widget
 *   Hash-activated modal screen (domain.com#coffee)
 
 == Installation ==
 
-1. Upload `tiny_coffee` directory to the `/wp-content/plugins/` directory
+1. Upload `tinycoffee` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Setup your information in `Settings>tinyCoffee`
+1. Setup your information in `Settings > tinyCoffee`
 1. Add to your website via template tag, shortcode, widget or modal view.
 
 == Frequently Asked Questions ==
