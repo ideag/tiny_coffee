@@ -1,0 +1,173 @@
+# Copyright (C) 2014 tinyCoffee
+# This file is distributed under the same license as the tinyCoffee package.
+msgid ""
+msgstr ""
+"Project-Id-Version: tinyCoffee 0.1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/tinycoffee\n"
+"POT-Creation-Date: 2014-01-25 06:09:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-01-29 14:57+0300\n"
+"Last-Translator: Arūnas Liuiza <arunas@liuiza.lt>\n"
+"Language-Team: Arunas Liuiza <arunas@liuiza.lt>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Lithuanian\n"
+"X-Poedit-Country: LITHUANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: includes/options-data.php:107
+msgid "tinyCoffee Options"
+msgstr "tinyCoffee Nustatymai"
+
+#. #-#-#-#-#  tinycoffee.pot (tinyCoffee 0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/options-data.php:109
+msgid "tinyCoffee"
+msgstr "tinyCoffee"
+
+#: includes/options-data.php:115
+msgid "Buy me a cup of coffee"
+msgstr "Pavaišink mane kava"
+
+#: includes/options-data.php:116
+msgid "A ridiculous amount of coffee was consumed in the process of building this project. Add some fuel if you'd like to keep me going!"
+msgstr ""
+
+#: includes/options-data.php:124
+msgctxt "Blog Title"
+msgid "A coffee for %s"
+msgstr "Kava %s"
+
+#: includes/options-data.php:138
+msgid "Main Settings"
+msgstr "Pagrindiniai nustatymai"
+
+#: includes/options-data.php:142
+msgid "Default title"
+msgstr "Numatyta antraštė"
+
+#: includes/options-data.php:147
+msgid "Default text"
+msgstr "Numatytas tekstas"
+
+#: includes/options-data.php:152
+msgid "Default icon"
+msgstr "Numatyta piktograma"
+
+#: includes/options-data.php:155
+msgid "You can choose any %s icon"
+msgstr "Galite pasirinkti bet kurią %s piktogramą"
+
+#: includes/options-data.php:164
+msgid "Hash"
+msgstr "Hash"
+
+#: includes/options-data.php:169
+msgid "Currency template"
+msgstr "Valiutos šablonas"
+
+#: includes/options-data.php:174
+msgid "Coffee price"
+msgstr "Kavos kaina"
+
+#: includes/options-data.php:176
+msgid "How much is a single cup of your favorite coffee?"
+msgstr "Kiek kainuoja vienas tavo mėgstamos kavos puodelis?"
+
+#: includes/options-data.php:182
+msgid "Paypal Settings"
+msgstr "PayPal nustatymai"
+
+#: includes/options-data.php:186
+msgid "Paypal username"
+msgstr "PayPal vartotojo vardas"
+
+#: includes/options-data.php:191
+msgid "Paypal currency"
+msgstr "Paypal valiuta"
+
+#: includes/options-data.php:196
+msgid "Exchange rate"
+msgstr "Valiutos keitimo kursas"
+
+#: includes/options-data.php:201
+msgid "Payment text"
+msgstr "Apmokėjimo tekstas"
+
+#: includes/options-data.php:206
+msgid "Sandbox mode"
+msgstr "Testavimo režimas"
+
+#: includes/options-data.php:207
+msgid "Enable"
+msgstr "Įjungti"
+
+#: includes/options-data.php:214
+msgid "Callback Settings"
+msgstr "Atsakymo nustatymai"
+
+#: includes/options-data.php:218
+msgid "Success callback"
+msgstr "Sėkmingas atsakymas"
+
+#: includes/options-data.php:223
+msgid "Cancel callback"
+msgstr "Atšaukimo atsakymas"
+
+#: includes/options-data.php:228
+msgid "Activate"
+msgstr "Įjungti"
+
+#: includes/options-data.php:232
+msgid "Template tag"
+msgstr "Šablono žymą"
+
+#: includes/options-data.php:233
+msgid "Shortcode"
+msgstr "Redaktoriaus kodas"
+
+#: includes/options-data.php:234
+msgid "Modal dialog"
+msgstr "Iššokantis langas"
+
+#: includes/options-data.php:235
+msgid "Widget"
+msgstr "Skydelis"
+
+#: includes/widget.php:11
+msgid "Coffee Widget"
+msgstr "Kavos skydelis"
+
+#: includes/widget.php:12
+msgid "Ask for coffee in your sidebar"
+msgstr "Paprašykite kavos šoninėje juostoje"
+
+#: includes/widget.php:39
+msgid "Title:"
+msgstr "Pavadinimas:"
+
+#: includes/widget.php:52
+msgid "Text:"
+msgstr "Tekstas:"
+
+#: tinycoffee.php:113
+msgid "Close"
+msgstr "Išjungti"
+
+#. Plugin URI of the plugin/theme
+msgid "http://github.com/ideag/tiny_coffee"
+msgstr "http://github.com/ideag/tiny_coffee"
+
+#. Description of the plugin/theme
+msgid "Ask people for coffee money"
+msgstr "Paprašyk žmonių pinigų kavai"
+
+#. Author of the plugin/theme
+msgid "Arūnas Liuiza"
+msgstr "Arūnas Liuiza"
+
+#. Author URI of the plugin/theme
+msgid "http://github.com/ideag"
+msgstr "http://github.com/ideag"
+

@@ -4,7 +4,7 @@ Donate link: http://wordofpress.com/#coffee
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 License: MIT
 License URI: http://wordofpress.com/gust/license
 
@@ -32,6 +32,9 @@ You can use this as:
 
 
 == Changelog ==
+
+= 0.1.2 =
+code cleanup, courtesy of Dzikri Aziz (kucrut) 
 
 = 0.1.1 =
 widget related bug fixes, courtesy of Dzikri Aziz (kucrut)

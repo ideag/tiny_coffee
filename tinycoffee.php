@@ -1,10 +1,9 @@
 <?php 
-
 /**
  * Plugin Name: tinyCoffee
  * Plugin URI: http://github.com/ideag/tiny_coffee
  * Description: Ask people for coffee money
- * Version: 0.1
+ * Version: 0.1.2
  * Author: Arūnas Liuiza
  * Author URI: http://github.com/ideag
  * Text Domain: tinycoffee
@@ -17,14 +16,13 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit;
 }
 
-
 /**
  * Main plugin class
  *
  */
 class Tiny_Coffee {
 
-	const VERSION = '0.1';
+	const VERSION = '0.1.2';
 
 	/**
 	 * Holds status
