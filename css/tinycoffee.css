@@ -206,8 +206,7 @@
 
 #modal-container .modal-header {
   position: relative;
-  padding: 20px;
-  border-bottom: 1px solid #edece4; }
+  padding: 20px;}
   #modal-container .modal-header h1 {
     display: inline-block;
     margin: 0;
