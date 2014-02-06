@@ -217,7 +217,9 @@
   position: relative;
   min-height: 100px;
   overflow-y: auto; }
-
+    #modal-container .tiny_coffee_text {
+      border-top: 1px solid #edece4;
+      padding-top: 10px; }
 #modal-container .modal-footer {
   margin-top: 20px; }
 
@@ -243,9 +245,9 @@
 }
 
 #modal-container .right {
-  margin-right:20px;  
+  margin-right:20px;
 }
 
 #modal-container form {
-  margin-left:20px;  
+  margin-left:20px;
 }
