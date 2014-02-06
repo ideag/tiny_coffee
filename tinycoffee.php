@@ -3,7 +3,7 @@
  * Plugin Name: tinyCoffee
  * Plugin URI: http://github.com/ideag/tiny_coffee
  * Description: Ask people for coffee money
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: Arūnas Liuiza
  * Author URI: http://github.com/ideag
  * Text Domain: tinycoffee
@@ -22,7 +22,7 @@ if ( ! function_exists( 'add_action' ) ) {
  */
 class Tiny_Coffee {
 
-	const VERSION = '0.1.2';
+	const VERSION = '0.1.3';
 
 	/**
 	 * Holds status
@@ -207,7 +207,11 @@ class Tiny_Coffee {
 					esc_attr( $options['coffee_currency'] ),
 					esc_attr( $options['coffee_hash'] )
 				) ?>
-					<?php echo wpautop( $options['coffee_text'] ) ?>
+					<?php if ( ! empty( $options['coffee_text'] ) ) : ?>
+						<div class="tiny_coffee_text">
+							<?php echo wpautop( $options['coffee_text'] ) ?>
+						</div>
+					<?php endif; ?>
 					<div class="tiny_coffee_slider"></div>
 					<div class="right"><span class="count"></span> <small class="count2"></small></div>
 					<form action="<?php echo esc_attr( $paypal_url ) ?>" method="post" class="tiny_coffee_form">

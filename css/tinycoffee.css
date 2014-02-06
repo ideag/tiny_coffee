@@ -206,8 +206,7 @@
 
 #modal-container .modal-header {
   position: relative;
-  padding: 20px;
-  border-bottom: 1px solid #edece4; }
+  padding: 20px;}
   #modal-container .modal-header h1 {
     display: inline-block;
     margin: 0;
@@ -218,7 +217,9 @@
   position: relative;
   min-height: 100px;
   overflow-y: auto; }
-
+    #modal-container .tiny_coffee_text {
+      border-top: 1px solid #edece4;
+      padding-top: 10px; }
 #modal-container .modal-footer {
   margin-top: 20px; }
 
@@ -234,6 +235,7 @@
 #modal-container .tiny_coffee_slider {
   margin-left:20px;
   margin-right:20px;
+  margin-top: 5px;
 }
 
 #modal-container .note {
@@ -243,9 +245,9 @@
 }
 
 #modal-container .right {
-  margin-right:20px;  
+  margin-right:20px;
 }
 
 #modal-container form {
-  margin-left:20px;  
+  margin-left:20px;
 }

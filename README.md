@@ -27,8 +27,11 @@ You can use this as:
 
 ## Changelog
 
+### 0.1.3
+Remove modal header bottom border
+
 ### 0.1.2
-code cleanup, courtesy of Dzikri Aziz (kucrut) 
+code cleanup, courtesy of Dzikri Aziz (kucrut)
 
 ### 0.1.1
 widget related bug fixes, courtesy of Dzikri Aziz (kucrut)
