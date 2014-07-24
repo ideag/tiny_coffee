@@ -1,14 +1,14 @@
 	<?php 
-/**
- * Plugin Name: tinyCoffee
- * Plugin URI: http://github.com/ideag/tiny_coffee
- * Description: Ask people for coffee money
- * Version: 0.1.4
- * Author: Arūnas Liuiza
- * Author URI: http://github.com/ideag
- * Text Domain: tinycoffee
- * Domain Path: /languages
- */
+/*
+Plugin Name: tinyCoffee
+Plugin URI: http://github.com/ideag/tiny_coffee
+Description: Ask people for coffee money
+Version: 0.1.4
+Author: Arūnas Liuiza
+Author URI: http://github.com/ideag
+Text Domain: tinycoffee
+Domain Path: /languages
+*/
 
 // Make sure we don't expose any info if called directly
 if ( ! function_exists( 'add_action' ) ) {
