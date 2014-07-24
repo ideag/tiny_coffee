@@ -156,6 +156,18 @@ class Tiny_Coffee_Options {
 	}
 
 
+	public function number( $args ) {
+		printf(
+			'<input class="regular-text" id="%1$s" name="%1$s" type="number" value="%2$s" min="%3$s" max="%4$s" step="%5$s" />',
+			esc_attr( $args['option_id'] ),
+			esc_attr( $args['value'] ),
+			intval( $args['options']['min'] ),
+			intval( $args['options']['max'] ),
+			intval( $args['options']['step'] )
+		);
+	}
+
+
 	public function textarea( $args ) {
 		printf(
 			'<textarea class="all-options" id="%1$s" name="%1$s" rows="5">%2$s</textarea>',

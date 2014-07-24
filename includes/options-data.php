@@ -118,6 +118,7 @@ class Tiny_Coffee_Options_Data {
 				'coffee_currency'   => '€%s',
 				'coffee_price'      => '2',
 				'coffee_hash'       => '#coffee',
+				'coffee_default'    => 2,
 				'paypal_email'      => '',
 				'paypal_currency'   => 'EUR',
 				'paypal_exchange'   => 1,
@@ -174,6 +175,17 @@ class Tiny_Coffee_Options_Data {
 							'title'       => __( 'Coffee price', 'tinycoffee' ),
 							'type'        => 'text',
 							'description' => __( 'How much is a single cup of your favorite coffee?', 'tinycoffee' ),
+						),
+						array(
+							'slug'        => 'default',
+							'title'       => __( 'Default amount', 'tinycoffee' ),
+							'type'        => 'number',
+							'description' => __( 'How many cups are selected by default', 'tinycoffee' ),
+							'options'			=> array(
+								'min' => 1,
+								'max' => 20,
+								'step' => 1
+							),
 						),
 					),
 				),

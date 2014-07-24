@@ -48,7 +48,7 @@ class Tiny_Coffee_Widget extends WP_Widget {
 		<p>
 			<?php printf(
 				'<label for="%s">%s</label>',
-				esc_attr( $this->get_field_id( 'title' ) ),
+				esc_attr( $this->get_field_id( 'text' ) ),
 				esc_html_e( 'Text:', 'tinycoffee' )
 			) ?>
 			<?php printf(

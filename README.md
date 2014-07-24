@@ -27,6 +27,9 @@ You can use this as:
 
 ## Changelog
 
+### 0.1.4
+Add option for default amount of cups
+
 ### 0.1.3
 Remove modal header bottom border
 
