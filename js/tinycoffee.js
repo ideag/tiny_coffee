@@ -23,6 +23,7 @@ jQuery(document).ready(function(){
       rate      : parent.attr('data-rate')*1,
       price     : parent.attr('data-price')*1,
       currency  : parent.attr('data-currency'),
+      start     : parent.attr('data-default'),
     }
     parent.show_amount = function(val){
       parent.find('.count2').text(opt.currency.replace('%s',val*opt.price));
@@ -35,7 +36,7 @@ jQuery(document).ready(function(){
     slider.noUiSlider({
       'range':[1,10],
       'step':1,
-      'start':2,
+      'start':opt.start,
       'handles':1,
       'serialization':{
         to: [

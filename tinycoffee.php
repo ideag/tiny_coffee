@@ -200,12 +200,13 @@ class Tiny_Coffee {
 				</header>
 		<?php endif; ?>
 				<?php printf(
-					'<section class="modal-body" data-icon="%s" data-price="%s" data-rate="%s" data-currency="%s" data-hash="%s">',
+					'<section class="modal-body" data-icon="%s" data-price="%s" data-rate="%s" data-currency="%s" data-hash="%s" data-default="%s">',
 					esc_attr( $options['coffee_icon'] ),
 					esc_attr( $options['coffee_price'] ),
 					esc_attr( $options['paypal_exchange'] ),
 					esc_attr( $options['coffee_currency'] ),
-					esc_attr( $options['coffee_hash'] )
+					esc_attr( $options['coffee_hash'] ),
+					esc_attr( $options['coffee_default'] )
 				) ?>
 					<?php if ( ! empty( $options['coffee_text'] ) ) : ?>
 						<div class="tiny_coffee_text">
