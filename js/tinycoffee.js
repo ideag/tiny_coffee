@@ -1,11 +1,11 @@
 jQuery(document).ready(function(){
-  window.addEventListener("hashchange", detectCoffee, false);
-  detectCoffee();
-  function detectCoffee(){
-    if (window.location.hash==jQuery('#modal-container .modal-body').attr('data-hash')){
+  var coffeeHash = jQuery('#modal-container .modal-body').attr('data-hash');
+  jQuery("a").click(function(e) {
+    if (this.hash === coffeeHash) {
+      e.preventDefault();
       openCoffee();
     }
-  };
+  });
   function openCoffee(){
     jQuery('#modal-container,.modal-background').css('display','block');
     jQuery('#modal-container>article,.modal-background').addClass('in');
