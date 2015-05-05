@@ -1,5 +1,10 @@
 jQuery(document).ready(function(){
+  function detectCoffee(){
+    if (window.location.hash===coffeeHash) { openCoffee(); }
+  }
   var coffeeHash = jQuery('#modal-container .modal-body').attr('data-hash');
+  window.addEventListener("hashchange", detectCoffee, false);
+  detectCoffee();
   jQuery("a").click(function(e) {
     if (this.hash === coffeeHash) {
       e.preventDefault();
@@ -9,11 +14,11 @@ jQuery(document).ready(function(){
   function openCoffee(){
     jQuery('#modal-container,.modal-background').css('display','block');
     jQuery('#modal-container>article,.modal-background').addClass('in');
-  };
+  }
   jQuery('.modal-background,.coffee_close').click(function(e){
     e.preventDefault();
     jQuery('#modal-container>article,.modal-background').removeClass('in');
-    setTimeout("jQuery('#modal-container,.modal-background').hide();",400);
+    setTimeout(function() { jQuery('#modal-container,.modal-background').hide(); } ,400);
   });
   jQuery('.tiny_coffee_slider').each(function(){
     var slider = jQuery(this);
@@ -24,7 +29,7 @@ jQuery(document).ready(function(){
       price     : parent.attr('data-price')*1,
       currency  : parent.attr('data-currency'),
       start     : parent.attr('data-default'),
-    }
+    };
     parent.show_amount = function(val){
       parent.find('.count2').text(opt.currency.replace('%s',val*opt.price));
       parent.find('form input[name=amount]').val(Math.round(val*opt.price*opt.rate*100)/100);
