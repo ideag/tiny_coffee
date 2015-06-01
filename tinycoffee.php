@@ -196,7 +196,7 @@ class Tiny_Coffee {
 		<?php else : ?>
 			<div class="tiny_coffee">
 				<header class="modal-header">
-					<h1><?php echo $options['coffee_title'] ?></h1>
+					<h3><?php echo $options['coffee_title'] ?></h3>
 				</header>
 		<?php endif; ?>
 				<?php printf(
