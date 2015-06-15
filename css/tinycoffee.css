@@ -224,9 +224,7 @@
   margin-top: 20px; }
 
 #modal-container .modal-style-wide {
-  width: 550px;
-  max-width: 90%;
-  margin: 0 auto; }
+  width: 550px; }
   @media (max-width: 800px), (max-width: 800px) {
     .modal-style-wide {
       width: 100%; } }

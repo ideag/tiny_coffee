@@ -1,11 +1,12 @@
-<?php 
+<?php
 /*
 Plugin Name: tinyCoffee
-Plugin URI: http://github.com/ideag/tiny_coffee
+Plugin URI: http://arunas.co/tinycoffee
 Description: Ask people for coffee money
-Version: 0.1.5
+Version: 0.2.0
 Author: Arūnas Liuiza
-Author URI: http://github.com/ideag
+Author URI: http://arunas.co
+Donate Link: http://arunas.co#coffee
 Text Domain: tinycoffee
 Domain Path: /languages
 */
@@ -22,7 +23,7 @@ if ( ! function_exists( 'add_action' ) ) {
  */
 class Tiny_Coffee {
 
-	const VERSION = '0.1.5';
+	const VERSION = '0.2.0';
 
 	/**
 	 * Holds status
@@ -168,7 +169,7 @@ class Tiny_Coffee {
 		}
 
 		$options = wp_parse_args( $settings, self::$options );
-
+    $options = apply_filters( 'tinycoffee_options', $options );
 		$form_data = array(
 			'business'      => $options['paypal_email'],
 			'cmd'           => '_xclick',

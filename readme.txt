@@ -3,8 +3,8 @@ Contributors: ideag, kucrut
 Donate link: http://wordofpress.com/#coffee
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
 Requires at least: 3.0.1
-Tested up to: 3.9.1
-Stable tag: 0.1.5
+Tested up to: 4.2.2
+Stable tag: 0.2.0
 License: MIT
 License URI: http://wordofpress.com/gust/license
 
@@ -33,7 +33,12 @@ You can use this as:
 
 == Changelog ==
 
-= 0.1.5 = 
+= 0.2.0 =
+Modified JavaScript to better handle the hash-activated modal dialog - contributed by Neil Foster (@mokummusic);
+Added a `tinycoffee_options` filter that can be used to modify all options that are used to build the tinyCoffee form and request to PayPal;
+Cleaned up a `notice` in the widget;
+
+= 0.1.5 =
 Removed a stray TAB symbol
 
 = 0.1.4 =

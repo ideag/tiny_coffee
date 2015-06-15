@@ -92,12 +92,7 @@ class Tiny_Coffee_Options {
 
 
 	public function get() {
-		$values = wp_parse_args(
-			(array) get_option( $this->data['option_name'] ),
-			$this->data['defaults']
-		);
-
-		return $values;
+		return get_option( $this->data['option_name'] );
 	}
 
 

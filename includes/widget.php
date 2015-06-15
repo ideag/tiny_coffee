@@ -15,7 +15,11 @@ class Tiny_Coffee_Widget extends WP_Widget {
 
 
 	public function widget( $args, $instance ) {
-		$instance['widget'] = true;
+		$defaults = array(
+			'widget' => true,
+			'title' => ''
+		);
+		$instance = wp_parse_args( $instance, $defaults );
 		?>
 		<?php echo $args['before_widget']; ?>
 			<?php
