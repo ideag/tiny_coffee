@@ -98,7 +98,7 @@ class Tiny_Coffee {
 		wp_register_script( 'jquery-noui-slider', $dir_url . 'js/nouislider.jquery.min.js', 'jquery', null, true );
 		wp_enqueue_script( 'tinycoffee', $dir_url . 'js/tinycoffee' . $suffix . '.js', array( 'jquery', 'jquery-noui-slider' ), self::VERSION, true );
 
-		wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
+		wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' );
 		wp_enqueue_style( 'jquery-noui-slider', $dir_url . 'js/nouislider.jquery.min.css' );
 		wp_enqueue_style( 'tinycoffee', $dir_url . 'css/tinycoffee' . $suffix . '.css', false, self::VERSION );
 	}
