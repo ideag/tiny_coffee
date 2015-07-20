@@ -1,14 +1,23 @@
 === tinyCoffee ===
 Contributors: ideag, kucrut
-Donate link: http://wordofpress.com/#coffee
+Donate link: http://arunas.co/#coffee
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: MIT
-License URI: http://wordofpress.com/gust/license
+License URI: http://opensource.org/licenses/MIT
 
 A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice.
+
+An enormous amount of coffee was consumed while developing these plugins, so if you like what you get, please consider treating me to a [cup](http://arunas.co/#coffee). Or two. Or ten.
+
+Also, try out my other plugins:
+
+* [Gust](http://tiny.lt/gust) - a Ghost-like admin panel for WordPress, featuring Markdown based split-view editor.
+* [tinySocial](http://tiny.lt/tinysocial) - a simple way to add social sharing linkst to Your WordPress posts via shortcodes. 
+* [tinyTOC](http://tiny.lt/tinytoc) - automatic Table of Contents, based on H1-H6 headings in post content.
+* [tinyIP](http://tiny.lt/tinyip) - *Premium* - stop WordPress users from sharing login information, force users to be logged in only from one device at a time.
 
 == Description ==
 
@@ -32,6 +41,10 @@ You can use this as:
 
 
 == Changelog ==
+
+= 0.2.1 = 
+updated FontAwesome version to 4.3.0;
+added methods to update FontAwesome version automatically when it is released;
 
 = 0.2.0 =
 Modified JavaScript to better handle the hash-activated modal dialog - contributed by Neil Foster (@mokummusic);

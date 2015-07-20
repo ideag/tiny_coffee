@@ -3,7 +3,7 @@
 Plugin Name: tinyCoffee
 Plugin URI: http://arunas.co/tinycoffee
 Description: Ask people for coffee money
-Version: 0.2.0
+Version: 0.2.1
 Author: Arūnas Liuiza
 Author URI: http://arunas.co
 Donate Link: http://arunas.co#coffee
@@ -23,7 +23,7 @@ if ( ! function_exists( 'add_action' ) ) {
  */
 class Tiny_Coffee {
 
-	const VERSION = '0.2.0';
+	const VERSION = '0.2.1';
 
 	/**
 	 * Holds status
@@ -32,6 +32,13 @@ class Tiny_Coffee {
 	 */
 	protected static $active = false;
 
+
+	/**
+	 * Holds FontAwesome version
+	 *
+	 * @var string
+	 */
+	private static $fontawesome = '4.3.0';
 	/**
 	 * Holds current option values
 	 *
@@ -49,6 +56,11 @@ class Tiny_Coffee {
 
 	public static function init() {
 		self::$includes_dir = plugin_dir_path( __FILE__ ) . 'includes/';
+
+		# FontAwesome version init
+		self::$fontawesome = self::get_fontawesome_version( self::$fontawesome, false );
+		# hook into cron
+		add_action( 'tinycoffee_daily', array( 'Tiny_Coffee', 'get_fontawesome_version' ) );
 
 		# i18n
 		load_plugin_textdomain( 'tinycoffee', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -68,7 +80,7 @@ class Tiny_Coffee {
 
 		self::$active = true;
 		self::activate_callbacks();
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'scripts' ), 9 );
 	}
 
 
@@ -98,7 +110,9 @@ class Tiny_Coffee {
 		wp_register_script( 'jquery-noui-slider', $dir_url . 'js/nouislider.jquery.min.js', 'jquery', null, true );
 		wp_enqueue_script( 'tinycoffee', $dir_url . 'js/tinycoffee' . $suffix . '.js', array( 'jquery', 'jquery-noui-slider' ), self::VERSION, true );
 
-		wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
+		wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/' . self::$fontawesome . '/css/font-awesome.css' );
+		wp_enqueue_style( 'font-awesome' );
+
 		wp_enqueue_style( 'jquery-noui-slider', $dir_url . 'js/nouislider.jquery.min.css' );
 		wp_enqueue_style( 'tinycoffee', $dir_url . 'css/tinycoffee' . $suffix . '.css', false, self::VERSION );
 	}
@@ -231,9 +245,42 @@ class Tiny_Coffee {
 		<?php
 		return ob_get_clean();
 	}
+	private static function get_fontawesome_version( $current= false, $fetch = true ) {
+		$version = get_transient('tinycoffee_fontawesome');
+		if ( false === $version && true === $fetch ) {
+			$response = wp_remote_get( 'http://api.jsdelivr.com/v1/bootstrap/libraries/font-awesome' );
+			if ( !is_wp_error($response) ) {
+				$response = wp_remote_retrieve_body( $response );
+				if ( !is_wp_error($response) ) {
+					$response = json_decode( $response, true );
+					if ( isset( $response[0]['lastversion']) ) {
+						$version = $response[0]['lastversion'];
+						set_transient( 'tinycoffee_fontawesome', $version, DAY_IN_SECONDS + HOUR_IN_SECONDS );
+					}
+				}
+			}
+		}
+		if ( 1 == version_compare( $version, $current) ) {
+			$version = $version;
+		} else {
+			$version = $current;
+		}
+		$version = apply_filters( 'tinycoffee_fontawesome_version', $version );
+		return $version;
+	}
+	public static function activate() {
+		self::$fontawesome = self::get_fontawesome_version( self::$fontawesome );
+		wp_schedule_event( time(), 'daily', 'tinycoffee_daily' );
+	}
+	// remove WP-Cron hook on deactivation
+	public static function deactivate() {
+		wp_clear_scheduled_hook( 'tinycoffee_daily' );
+	}
 }
 
 add_action( 'plugins_loaded', array( 'Tiny_Coffee', 'init' ) );
+register_activation_hook( __FILE__,  array( 'Tiny_Coffee', 'activate' ) );
+register_deactivation_hook( __FILE__,  array( 'Tiny_Coffee', 'deactivate' ) );
 
 function get_coffee( $options ) { return Tiny_Coffee::tag( $options ); }
 function the_coffee( $options ) { echo Tiny_Coffee::tag( $options ) ; }
