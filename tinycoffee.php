@@ -3,7 +3,7 @@
 Plugin Name: tinyCoffee
 Plugin URI: http://arunas.co/tinycoffee
 Description: Ask people for coffee money
-Version: 0.2.1
+Version: 0.2.2
 Author: Arūnas Liuiza
 Author URI: http://arunas.co
 Donate Link: http://arunas.co#coffee
@@ -38,7 +38,7 @@ class Tiny_Coffee {
 	 *
 	 * @var string
 	 */
-	private static $fontawesome = '4.3.0';
+	private static $fontawesome = '4.7.0';
 	/**
 	 * Holds current option values
 	 *
@@ -245,7 +245,7 @@ class Tiny_Coffee {
 		<?php
 		return ob_get_clean();
 	}
-	private static function get_fontawesome_version( $current= false, $fetch = true ) {
+	public static function get_fontawesome_version( $current= false, $fetch = true ) {
 		$version = get_transient('tinycoffee_fontawesome');
 		if ( false === $version && true === $fetch ) {
 			$response = wp_remote_get( 'http://api.jsdelivr.com/v1/bootstrap/libraries/font-awesome' );

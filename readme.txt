@@ -3,8 +3,8 @@ Contributors: ideag, kucrut
 Donate link: http://arunas.co/#coffee
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
 Requires at least: 3.0.1
-Tested up to: 4.2.2
-Stable tag: 0.2.1
+Tested up to: 4.7.2
+Stable tag: 0.2.2
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -15,7 +15,7 @@ An enormous amount of coffee was consumed while developing these plugins, so if 
 Also, try out my other plugins:
 
 * [Gust](http://tiny.lt/gust) - a Ghost-like admin panel for WordPress, featuring Markdown based split-view editor.
-* [tinySocial](http://tiny.lt/tinysocial) - a simple way to add social sharing linkst to Your WordPress posts via shortcodes. 
+* [tinySocial](http://tiny.lt/tinysocial) - a simple way to add social sharing linkst to Your WordPress posts via shortcodes.
 * [tinyTOC](http://tiny.lt/tinytoc) - automatic Table of Contents, based on H1-H6 headings in post content.
 * [tinyIP](http://tiny.lt/tinyip) - *Premium* - stop WordPress users from sharing login information, force users to be logged in only from one device at a time.
 
@@ -42,7 +42,11 @@ You can use this as:
 
 == Changelog ==
 
-= 0.2.1 = 
+= 0.2.2 =
+fixed FontAwesome version check WP Cron task
+updated FontAwesome version to 4.7.0
+
+= 0.2.1 =
 updated FontAwesome version to 4.3.0;
 added methods to update FontAwesome version automatically when it is released;
 
