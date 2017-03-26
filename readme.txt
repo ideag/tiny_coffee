@@ -1,6 +1,6 @@
 === tinyCoffee ===
 Contributors: ideag, kucrut
-Donate link: http://arunas.co/#coffee
+Donate link: https://www.patreon.com/arunas
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
 Requires at least: 3.0.1
 Tested up to: 4.7.2
@@ -10,7 +10,7 @@ License URI: http://opensource.org/licenses/MIT
 
 A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice.
 
-An enormous amount of coffee was consumed while developing these plugins, so if you like what you get, please consider treating me to a [cup](http://arunas.co/#coffee). Or two. Or ten.
+If you like my work and want to support development of my open source WordPress plugins, please consider becoming my patron at [Patreon](https://www.patreon.com/arunas).
 
 Also, try out my other plugins:
 
