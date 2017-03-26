@@ -10,15 +10,6 @@ License URI: http://opensource.org/licenses/MIT
 
 A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice.
 
-If you like my work and want to support development of my open source WordPress plugins, please consider becoming my patron at [Patreon](https://www.patreon.com/arunas).
-
-Also, try out my other plugins:
-
-* [Gust](http://tiny.lt/gust) - a Ghost-like admin panel for WordPress, featuring Markdown based split-view editor.
-* [tinySocial](http://tiny.lt/tinysocial) - a simple way to add social sharing linkst to Your WordPress posts via shortcodes.
-* [tinyTOC](http://tiny.lt/tinytoc) - automatic Table of Contents, based on H1-H6 headings in post content.
-* [tinyIP](http://tiny.lt/tinyip) - *Premium* - stop WordPress users from sharing login information, force users to be logged in only from one device at a time.
-
 == Description ==
 
 Ask your supporters to treat you to a cup of coffee, pint of beer or some other simple treat. It is a more creative way to ask for donations via PayPal.
@@ -29,6 +20,15 @@ You can use this as:
 *   Shortcode `[coffee]`/`[tiny_coffee]`
 *   Sidebar widget
 *   Hash-activated modal screen (domain.com#coffee)
+
+If you like my work and want to support development of my open source WordPress plugins, please consider becoming my patron at [Patreon](https://www.patreon.com/arunas).
+
+Also, try out my other plugins:
+
+* [Gust](http://tiny.lt/gust) - a Ghost-like admin panel for WordPress, featuring Markdown based split-view editor.
+* [tinySocial](http://tiny.lt/tinysocial) - a simple way to add social sharing linkst to Your WordPress posts via shortcodes.
+* [tinyTOC](http://tiny.lt/tinytoc) - automatic Table of Contents, based on H1-H6 headings in post content.
+* [tinyIP](http://tiny.lt/tinyip) - *Premium* - stop WordPress users from sharing login information, force users to be logged in only from one device at a time.
 
 == Installation ==
 
