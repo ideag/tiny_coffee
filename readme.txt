@@ -3,8 +3,8 @@ Contributors: ideag, kucrut
 Donate link: https://www.patreon.com/arunas
 Tags: donate, donate button, paypal donate, paypal, coffee, donate widget, donate shortcode
 Requires at least: 3.0.1
-Tested up to: 4.7.2
-Stable tag: 0.2.2
+Tested up to: 4.9
+Stable tag: 0.3.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -41,6 +41,9 @@ Also, try out my other plugins:
 
 
 == Changelog ==
+
+= 0.3.0 =
+added redirection to current page after payment
 
 = 0.2.2 =
 fixed FontAwesome version check WP Cron task
