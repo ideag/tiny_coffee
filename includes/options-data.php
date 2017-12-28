@@ -127,6 +127,7 @@ class Tiny_Coffee_Options_Data {
 				'paypal_testing'    => false,
 				'callback_success'  => get_bloginfo( 'url' ),
 				'callback_cancel'   => get_bloginfo( 'url' ),
+				'callback_auto'			=> false,
 				'callback_activate' => array(
 					'template_tag' => true,
 					'widget'       => true,
@@ -235,6 +236,11 @@ class Tiny_Coffee_Options_Data {
 							'slug'    => 'cancel',
 							'title'   => __( 'Cancel callback', 'tinycoffee' ),
 							'type'    => 'text'
+						),
+						array(
+							'slug'    => 'auto',
+							'title'   => __( 'Redirect to the same page', 'tinycoffee' ),
+							'type'    => 'checkbox',
 						),
 						array(
 							'slug'    => 'activate',

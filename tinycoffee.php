@@ -3,7 +3,7 @@
 Plugin Name: tinyCoffee
 Plugin URI: http://arunas.co/tinycoffee
 Description: Ask people for coffee money
-Version: 0.2.2
+Version: 0.3.0
 Author: Arūnas Liuiza
 Author URI: http://arunas.co
 Donate Link: http://arunas.co#coffee
@@ -11,7 +11,7 @@ Text Domain: tinycoffee
 Domain Path: /languages
 */
 
-// Make sure we don't expose any info if called directly
+// Make sure we don't expose any info if called directly.
 if ( ! function_exists( 'add_action' ) ) {
 	echo "Hi there!  I'm just a plugin, not much I can do when called directly.";
 	exit;
@@ -23,7 +23,7 @@ if ( ! function_exists( 'add_action' ) ) {
  */
 class Tiny_Coffee {
 
-	const VERSION = '0.2.1';
+	const VERSION = '0.3.0';
 
 	/**
 	 * Holds status
@@ -57,6 +57,8 @@ class Tiny_Coffee {
 	public static function init() {
 		self::$includes_dir = plugin_dir_path( __FILE__ ) . 'includes/';
 
+		// PayPal IPN listener.
+		add_action( 'init', array( 'Tiny_Coffee', 'ipn_listener' ) );
 		# FontAwesome version init
 		self::$fontawesome = self::get_fontawesome_version( self::$fontawesome, false );
 		# hook into cron
@@ -81,6 +83,14 @@ class Tiny_Coffee {
 		self::$active = true;
 		self::activate_callbacks();
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'scripts' ), 9 );
+	}
+
+	public static function ipn_listener() {
+		if ( ! isset( $_GET['tinycoffee_notify'] ) ) {
+			return false;
+		}
+		do_action( 'tinycoffee_ipn' );
+		die();
 	}
 
 
@@ -176,21 +186,34 @@ class Tiny_Coffee {
 		return Tiny_Coffee::build( $settings );
 	}
 
-
+	public static function _get_current_uri() {
+		global $wp;
+		$current_url = home_url( add_query_arg( array(), $wp->request ) );
+		return $current_url;
+	}
 	public static function build( $settings = false ) {
 		if ( empty( $settings ) ) {
 			$settings = array();
 		}
-
+		$defaults = array(
+			'callback_notify' => add_query_arg( 'tinycoffee_notify', true, get_bloginfo( 'url' ) ),
+		);
+		$settings = wp_parse_args( $settings, $defaults );
 		$options = wp_parse_args( $settings, self::$options );
-    $options = apply_filters( 'tinycoffee_options', $options );
+		if ( $options['callback_auto'] ) {
+			$options['callback_success'] = add_query_arg( 'tinycoffee_success', true, Tiny_Coffee::_get_current_uri() );
+			$options['callback_cancel']  = add_query_arg( 'tinycoffee_cancel', true, Tiny_Coffee::_get_current_uri() );
+		}
+		$options = apply_filters( 'tinycoffee_options', $options );
 		$form_data = array(
 			'business'      => $options['paypal_email'],
 			'cmd'           => '_xclick',
 			'rm'            => '2',
 			'amount'        => 0,
+			'rm'						=> 2,
 			'return'        => $options['callback_success'],
 			'cancel_return' => $options['callback_cancel'],
+			'notify_url'		=> $options['callback_notify'],
 			'item_name'     => $options['paypal_text'],
 			'currency_code' => $options['paypal_currency'],
 			'no_shipping'   => 1,
