@@ -8,7 +8,7 @@ Stable tag: 0.3.0
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
-A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice.
+A WordPress donate button plugin with a twist - ask your supporters to treat you to a coffee, beer or other beverage of your choice. 
 
 == Description ==
 
