@@ -78,7 +78,7 @@ Initial release
 
 == Upgrade Notice ==
 
-No upgrade notices.
+No upgrade notices. More deployer testing
 
 == Screenshots ==
 1. Inside a post/page
