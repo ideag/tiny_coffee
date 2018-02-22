@@ -12,7 +12,7 @@ A WordPress donate button plugin with a twist - ask your supporters to treat you
 
 == Description ==
 
-Ask your supporters to treat you to a cup of coffee, pint of beer or some other simple treat. It is a more creative way to ask for donations via PayPal.
+Ask your supporters to treat you to a cup of coffee, pint of beer or some other simple treat. It is a more creative way to ask for donations via PayPal. You can test this out live on the [demo site](http://gettryout.com/new/?template=tinycoffee&provider=demo&redirect=/).
 
 You can use this as:
 
